@@ -3,6 +3,11 @@
 @2
 M=0     // Clear answer memory
 
+@0
+D=M
+@END    // Checks if value at @0 = 0. This needs to be done because I use the @0 value as the counter value (which is why I don't need to do it for the value @1).
+D;JEQ   // If @0 = 0, we want to jump the whole loop to the end because the end product needs to be 0.
+
 (LOOP)
 @1
 D=M    // Assign Value @1 to D
